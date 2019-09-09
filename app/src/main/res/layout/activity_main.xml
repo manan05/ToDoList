@@ -25,7 +25,12 @@
             android:text="Add"/>
     </LinearLayout>
 
-
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
+        android:layout_height="704dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"></ListView>
 
 
 </LinearLayout>
