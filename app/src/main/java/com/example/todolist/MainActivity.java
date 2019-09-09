@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     EditText etItem;
     Button btnAdd;
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.btnAdd);
         lvItems = findViewById(R.id.lvItems);
 
+        items = FileHelper.readData(this);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
+        lvItems.setAdapter(adapter);
+
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,9 +43,20 @@ public class MainActivity extends AppCompatActivity {
                     String data = etItem.getText().toString();
                     adapter.add(data);
                     etItem.setText("");
+
+                    FileHelper.writeData(items,MainActivity.this);
                     Toast.makeText(MainActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+        lvItems.setOnItemClickListener(MainActivity.this);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        items.remove(position);
+        adapter.notifyDataSetChanged();
+        FileHelper.writeData(items, this);
+        Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show();
     }
 }
