@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     EditText etItem;
     Button btnAdd;
     ListView lvItems;
-
+    //Created an arrayList of name items
     ArrayList<String> items;
     ArrayAdapter<String> adapter;
 
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         btnAdd = findViewById(R.id.btnAdd);
         lvItems = findViewById(R.id.lvItems);
 
-        items = FileHelper.readData(this);
+
+        items = FileHelper.readData(this); // ReadData returns
         adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
         lvItems.setAdapter(adapter);
 
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             }
         });
-        lvItems.setOnItemClickListener(MainActivity.this);
+        lvItems.setOnItemClickListener(MainActivity.this );
     }
 
     @Override
