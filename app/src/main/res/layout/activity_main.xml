@@ -21,7 +21,6 @@
             android:layout_weight="4.25"
             android:hint="Enter Item"
             android:paddingTop="10dp"
-
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btnAdd"
@@ -35,16 +34,17 @@
         <!-- here
              android:layout_weight is used so that there is a ratio
              between the et and btn
+             this ratio decides how much space both will take
                 -->
     </LinearLayout>
 
     <ListView
         android:id="@+id/lvItems"
         android:layout_width="match_parent"
-        android:layout_height="704dp"
+        android:layout_height="wrap_content"
 
         android:layout_marginBottom="10dp"
-        android:background="#98FB98">
+        android:background="#AFEEEE">
 
     </ListView>
 

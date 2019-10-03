@@ -1,6 +1,7 @@
 package com.example.todolist;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +14,8 @@ import java.util.ArrayList;
 //This will help us to save the data
 public class FileHelper {
     public static final String FILENAME = "listinfo.dat";
-
+    // This is the file name in which the data is saved
+    public static final String TAG = "error";
     public static void writeData(ArrayList<String> items, Context context) {
 
         try {
@@ -23,9 +25,9 @@ public class FileHelper {
             oos.close();
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG,Log.getStackTraceString(e));
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG,Log.getStackTraceString(e));
         }
     }
 
@@ -39,11 +41,11 @@ public class FileHelper {
 
             itemsList = new ArrayList<>();
 
-            e.printStackTrace();
+            Log.e(TAG,Log.getStackTraceString(e));
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG,Log.getStackTraceString(e));
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            Log.e(TAG,Log.getStackTraceString(e));
         }
         return itemsList;
     }
