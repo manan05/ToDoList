@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#948E8E"
+    android:background="@drawable/back_design"
     tools:context=".MainActivity">
     <!-- First LinearLayout is vertical -->
     <LinearLayout
@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:maxHeight="10dp"
             android:maxWidth="10dp"
+            android:backgroundTint="#FF4BDF53"
             android:clickable="true"
             android:layout_weight="0"
             app:srcCompat="@drawable/ic_add_24px" />
@@ -48,12 +49,13 @@
     </LinearLayout>
 
     <ListView
+
         android:id="@+id/lvItems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="10dp"
-        android:background="#AFEEEE">
+        android:background="@drawable/list_design">
 
     </ListView>
 

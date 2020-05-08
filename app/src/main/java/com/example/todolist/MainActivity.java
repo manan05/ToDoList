@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     etItem.setText("");
 
                     FileHelper.writeData(items,MainActivity.this);
-                    Toast.makeText(MainActivity.this, "Item Added", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Task Added", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -60,6 +60,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         items.remove(position);
         adapter.notifyDataSetChanged();
         FileHelper.writeData(items, this);
-        Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Task Deleted", Toast.LENGTH_SHORT).show();
     }
 }
