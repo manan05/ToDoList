@@ -22,15 +22,24 @@
             android:hint="Enter Item"
             android:paddingTop="10dp"
             android:layout_height="wrap_content" />
-        <Button
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAdd"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.75"
-            android:layout_marginLeft="10dp"
-            android:text="Add"
-            android:background="#87CEFA"
-            />
+            android:maxHeight="10dp"
+            android:maxWidth="10dp"
+            android:clickable="true"
+            android:layout_weight="0"
+            app:srcCompat="@drawable/ic_add_24px" />
+        <!--<Button-->
+            <!--android:id="@+id/btnAdd"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.75"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:text="Add"-->
+            <!--android:background="#87CEFA"-->
+            <!--/>-->
         <!-- here
              android:layout_weight is used so that there is a ratio
              between the et and btn
@@ -47,6 +56,8 @@
         android:background="#AFEEEE">
 
     </ListView>
+
+
 
 
 </LinearLayout>

@@ -11,12 +11,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     EditText etItem;
-    Button btnAdd;
+    FloatingActionButton btnAdd;
     ListView lvItems;
     //Created an arrayList of name items
     ArrayList<String> items;
