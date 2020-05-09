@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/back_design"
+
+    android:orientation="vertical"
     tools:context=".MainActivity">
     <!-- First LinearLayout is vertical -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
         <!-- Second LinearLayout is horizontal so that
              the editText and the button appear horizontally.
@@ -18,60 +23,36 @@
         <EditText
             android:id="@+id/etItem"
             android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="4.25"
-            android:hint="Enter Task"
-            android:paddingBottom="10dp"
+
             android:gravity="center_horizontal"
-            android:paddingTop="10dp"
-            android:layout_height="wrap_content" />
+
+            android:hint="Enter Task" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="10dp"
-            android:maxWidth="10dp"
+            android:layout_gravity=""
+            android:layout_weight="0"
             android:backgroundTint="#39DAF3"
             android:clickable="true"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/ic_add_24px" />
-        <!--<Button-->
-            <!--android:id="@+id/btnAdd"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_weight="0.75"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:text="Add"-->
-            <!--android:background="#87CEFA"-->
-            <!--/>-->
-        <!-- here
-             android:layout_weight is used so that there is a ratio
-             between the et and btn
-             this ratio decides how much space both will take
-                -->
+            android:maxWidth="5dp"
+            android:maxHeight="5dp"
+            app:srcCompat="@drawable/ic_add_24dp" />
+
     </LinearLayout>
 
-<com.baoyz.swipemenulistview.SwipeMenuListView
-    android:id="@+id/lvItems"
-    android:layout_width="match_parent"
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lvItems"
+        android:layout_width="match_parent"
 
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
 
-    android:background="@drawable/list_design">
-
-</com.baoyz.swipemenulistview.SwipeMenuListView>
-    <!--<ListView-->
-
-        <!--android:id="@+id/lvItems"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-
-        <!--android:layout_marginBottom="10dp"-->
-        <!--android:background="@drawable/list_design">-->
-
-    <!--</ListView>-->
-
-
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
 
 
 </LinearLayout>
