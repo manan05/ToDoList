@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity  {
                 deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
                         0x3F, 0x25)));
                 // set item width
-                deleteItem.setWidth(170);
+                deleteItem.setWidth(150);
+                
                 // set a icon
                 deleteItem.setIcon(R.drawable.ic_delete);
                 // add to menu
@@ -95,7 +96,7 @@ public class MainActivity extends AppCompatActivity  {
                         items.remove(position);
                         adapter.notifyDataSetChanged();
                         FileHelper.writeData(items, getApplicationContext());
-                        Toast.makeText(MainActivity.this, "Item Deleted", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Task Deleted", Toast.LENGTH_SHORT).show();
                         break;
                 }
                 // false : close the menu; true : not close the menu
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity  {
         });
 
     }
-    
+
 
 
 }
