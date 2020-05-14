@@ -4,4 +4,4 @@ ToDoList is a simple android application. Here are some screenshots of the app. 
 ## Screenshots
 
 #### Main Screen
-<img src="https://github.com/manan05/ToDoList/blob/master/app/src/main/assets/main-screen-opening.jpg" alt="main screen" width="350" height="500">
+<img src="https://github.com/manan05/ToDoList/blob/master/app/src/main/assets/main-screen-opening.jpg" alt="main screen" width="400" height="700">
